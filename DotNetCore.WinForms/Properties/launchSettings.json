@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "DotNetCore.WinForms": {
+      "commandName": "Project"
+    }
+  }
+}

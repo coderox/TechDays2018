@@ -11,10 +11,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <controls:WebViewCompatible Source="http://html5test.com"/>
-        <WebBrowser Grid.Column="1" Source="http://html5test.com"/>
+        <controls:WebView Grid.Column="1" Source="http://html5test.com"/>
+        <WebBrowser Grid.Column="2" Source="http://html5test.com"/>
 
     </Grid>
 </Window>
