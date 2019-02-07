@@ -8,15 +8,31 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <controls:WebViewCompatible Source="http://html5test.com"/>
-        <controls:WebView Grid.Column="1" Source="http://html5test.com"/>
-        <WebBrowser Grid.Column="2" Source="http://html5test.com"/>
+        <TextBlock>WebBrowser</TextBlock>
+        <TextBlock Grid.Column="1">WebView</TextBlock>
+        <TextBlock Grid.Column="2">WebViewCompatible</TextBlock>
+
+        <WebBrowser Grid.Row="1" Source="http://html5test.com"/>
+        <controls:WebView Grid.Row="1" Grid.Column="1" Source="http://html5test.com"/>
+        <controls:WebViewCompatible Grid.Row="1" Grid.Column="2" Source="http://html5test.com"/>
 
     </Grid>
 </Window>
